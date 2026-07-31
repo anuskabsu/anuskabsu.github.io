@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The portfolio of Anuska Singh — urban designer, planner, and researcher." />
+    <title>Anuska Singh — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .travel-map-wrap { position:relative; overflow:hidden; border:1px solid rgba(31,36,29,.28); background:#fffaf3; aspect-ratio:1.82; }.travel-map-base { width:100%; height:100%; display:block; object-fit:cover; opacity:.88; mix-blend-mode:multiply; }.travel-route { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }.travel-route path { fill:none; stroke:#6b463b; stroke-width:2.3; stroke-dasharray:8 10; animation:route-draw 6s linear infinite; }.travel-route .route-arrow { fill:#6b463b; }.map-pin { position:absolute; z-index:2; width:15px; height:15px; border:2px solid #fffaf3; border-radius:50%; background:#b66f5e; box-shadow:0 1px 7px #1f241d55; transform:translate(-50%,-50%); }.map-pin::after { content:attr(data-label); position:absolute; left:50%; bottom:calc(100% + .5rem); transform:translateX(-50%); padding:.25rem .4rem; background:#fffaf3e8; color:#1f241d; font:.55rem "DM Mono",monospace; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .2s; }.map-pin:hover::after { opacity:1; }.map-pin.home { width:22px; height:22px; background:#754838; box-shadow:0 0 0 5px #f5ddcac7, 0 1px 7px #1f241d55; animation:home-pulse 3.2s ease-in-out infinite; }.map-pin.current { width:19px; height:19px; background:#1f241d; box-shadow:0 0 0 4px #e7c3a8c7, 0 1px 7px #1f241d55; }.map-legend { position:absolute; left:1rem; bottom:1rem; z-index:3; display:flex; gap:1rem; padding:.6rem .75rem; background:#fffaf3e8; border:1px solid rgba(31,36,29,.2); font:.62rem "DM Mono",monospace; }.map-legend span { display:flex; align-items:center; gap:.35rem; }.map-dot { width:.65rem; height:.65rem; border-radius:50%; display:inline-block; }.home-dot { background:#754838; }.current-dot { background:#1f241d; }.travel-dot { width:.45rem; height:.45rem; background:#b66f5e; } @keyframes home-pulse { 50% { transform:translate(-50%,-50%) scale(1.13); } } @keyframes route-draw { to { stroke-dashoffset:-180; } } @media (max-width:700px) { .travel-map-wrap { aspect-ratio:1.2; }.travel-map-base { object-fit:cover; }.map-legend { left:.6rem; right:.6rem; bottom:.6rem; justify-content:space-between; gap:.25rem; font-size:.52rem; } }
+      .travel-map-base { object-fit:contain; opacity:1; mix-blend-mode:normal; }.travel-route path { stroke-width:1.15; stroke-dasharray:2 4; animation:route-draw 8s linear infinite; }.route-dot { fill:#6b463b; }.map-pin { display:grid; place-items:center; color:#fffaf3; font:700 .55rem/1 "DM Sans",sans-serif; }.map-pin::before { content:"✦"; }.map-pin.home::before { content:"⌂"; font-size:.75rem; }.map-pin.current::before { content:"→"; font-size:.9rem; }.map-section .section-heading { align-items:flex-start; }.travel-summary { display:flex; align-items:flex-end; gap:.55rem; margin-left:auto; }.travel-summary strong { font:600 clamp(3.2rem,6vw,5.5rem)/.72 "Playfair Display",serif; letter-spacing:-.08em; }.travel-summary span { padding-bottom:.12rem; font:.57rem/1.15 "DM Mono",monospace; text-transform:uppercase; }.map-legend { top:1rem; right:1rem; bottom:auto; left:auto; align-items:center; gap:.7rem; padding:.7rem .9rem; border-radius:999px; background:#fffaf3ee; }.map-legend p { display:flex; flex-direction:column; margin:0; line-height:1; }.map-legend p b { font:.7rem "DM Sans",sans-serif; }.map-legend p span { margin-top:.22rem; font:.5rem "DM Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }.map-legend > i { font:1.05rem/1 "EB Garamond",serif; font-style:normal; color:#9b6657; }.map-legend .map-dot { display:none; }.about-copy,.fact-card { min-width:0; }.about-copy > p { max-width:100%; font-size:.92rem; line-height:1.48; }.about-copy h2 em { display:inline-block; font-size:1.2em; }.fact-card { position:relative; overflow:hidden; background:#e5c8ae; border:1px solid #9a725b55; box-shadow:7px 8px 0 #9a725b20; padding:2.4rem 2.3rem 2.8rem; }.fact-card::before { content:""; position:absolute; top:0; right:0; width:0; height:0; border-style:solid; border-width:0 0 42px 42px; border-color:transparent transparent #f7e8da transparent; filter:drop-shadow(-1px 1px 0 #9a725b44); }.fact-card .eyebrow { margin-bottom:1.1rem; }.current-text { min-height:300px; margin-top:.2rem; font-family:"EB Garamond", Garamond, serif; }.flipbook { position:relative; min-height:300px; perspective:1000px; cursor:pointer; }.flipbook:focus-visible { outline:2px solid #6b463b; outline-offset:5px; }.flip-page { position:absolute; inset:0 0 2.6rem; backface-visibility:hidden; transform-origin:left center; transition:transform .65s cubic-bezier(.3,.8,.3,1), opacity .35s; }.flip-main { z-index:3; }.flip-reading { z-index:2; transform:rotateY(180deg); }.flip-location { z-index:1; transform:rotateY(180deg); }.flipbook[data-page="1"] .flip-main,.flipbook[data-page="2"] .flip-main { transform:rotateY(-180deg); opacity:0; }.flipbook[data-page="1"] .flip-reading { transform:rotateY(0); }.flipbook[data-page="2"] .flip-reading { transform:rotateY(-180deg); opacity:0; }.flipbook[data-page="2"] .flip-location { transform:rotateY(0); }.current-intro { display:block; margin-bottom:1.7rem; }.current-topics { display:block; margin-top:0; font:1.02rem/1.55 "EB Garamond", Garamond, serif; }.flip-reading,.flip-location { padding-top:2.4rem; }.flip-reading p,.flip-location p { margin:0 0 1rem; font:.62rem "DM Mono",monospace; letter-spacing:.08em; text-transform:uppercase; }.flip-reading strong,.flip-location strong { display:block; font:italic 1.7rem/1.1 "EB Garamond", Garamond, serif; }.current-reading,.current-location { margin-top:1.65rem; font:1rem/1.35 "EB Garamond", Garamond, serif; }.current-reading em { font-size:1.08em; }.current-location { margin-top:1.45rem; } @media (max-width:700px) { .travel-summary { margin-top:1.25rem; }.map-section .section-heading { display:grid; grid-template-columns:1fr auto; }.map-section .section-heading > p:last-child { grid-column:1; }.map-legend { top:.7rem; right:.7rem; padding:.55rem .7rem; }.current-text,.flipbook { min-height:260px; } }
+      .credentials-section .credential-block .section-heading > p:last-child { font-size:1.05rem; }.credentials-section .credential-block:first-child .section-heading > p:last-child { font:700 1.05rem/1.15 "EB Garamond", Garamond, serif; }.credentials-section .credential-block:last-child .section-heading > p:last-child { font:700 italic 1.05rem/1.15 "Canela", "EB Garamond", Garamond, serif; }.publication-list a { align-items:flex-start; }.publication-list .publication-summary { max-height:0; margin:0; overflow:hidden; opacity:0; transform:translateY(-.2rem); color:#5f493c; font:italic .85rem/1.3 "EB Garamond", Garamond, serif; transition:max-height .28s ease, margin .28s ease, opacity .28s ease, transform .28s ease; }.publication-list a:hover .publication-summary,.publication-list a:focus-visible .publication-summary { max-height:4rem; margin-top:.7rem; opacity:1; transform:translateY(0); }.creator-stats { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:2rem; margin-top:5.5rem; }.creator-stats strong { font-size:clamp(2.1rem,3.2vw,3.5rem); }.creator-stats span { margin-top:.8rem; }.map-section { background:#e6d6cf; }.map-section .section-heading { margin-bottom:4rem; }.country-cloud { min-height:330px; display:flex; flex-wrap:wrap; align-content:center; justify-content:center; gap:1.4rem 3rem; padding:1.5rem 6vw 3rem; }.country { display:inline-block; transition:transform .22s ease, color .22s ease; }.country:hover { transform:translateY(-.16em) rotate(-2deg); }.country-nepal { order:2; transform:scale(1.3); }.country-1 { order:1; font-style:italic; }.country-2 { order:3; color:#9a655d; }.country-3 { order:5; color:#795447; }.country-4 { order:4; }.country:nth-child(6) { order:7; font-family:"EB Garamond", Garamond, serif; font-size:clamp(2.2rem,4.4vw,4.8rem); color:#6a4b3e; }.country:nth-child(7) { order:6; font-style:italic; }.country:nth-child(8) { order:8; color:#9a655d; }.country:nth-child(9) { order:0; font-family:"DM Sans",sans-serif; font-size:clamp(1.35rem,2.5vw,2.5rem); }.travel-map-wrap,.travel-map-base,.travel-route,.map-pin,.map-legend { display:none; } @media (max-width:700px) { .creator-stats { gap:1.1rem; margin-top:3.5rem; }.creator-stats strong { font-size:2rem; }.creator-stats span { font-size:.53rem; }.country-cloud { min-height:250px; gap:1rem 1.4rem; padding:1rem 0 2rem; } }
+      .about-copy > p { font-size:1rem; }.credentials-section .credential-block .section-heading > p:last-child,.credentials-section .credential-block:first-child .section-heading > p:last-child,.credentials-section .credential-block:last-child .section-heading > p:last-child { font:400 .92rem/1.2 "EB Garamond", Garamond, serif; }.award-list h3 { font:700 1.28rem/1.08 "EB Garamond", Garamond, serif; }.award-list span { font:700 .84rem "DM Sans",sans-serif; }.publication-list h3 { font:italic 1.2rem/1.08 "Canela", "EB Garamond", Garamond, serif; }.map-section .section-heading { justify-content:space-between; }.country-nepal { color:#754838; }.country-nepal::after { content:none; }.country-1 { position:relative; color:#1f241d; transform:scale(1.12); }.country i { display:inline-grid; place-items:center; width:1.25em; height:1.25em; margin-right:.22em; border:1px solid currentColor; border-radius:50%; vertical-align:.12em; font:700 .48em/1 "DM Sans",sans-serif; font-style:normal; }.country-nepal i { background:#754838; border-color:#754838; color:#fffaf3; }.country-1 i { background:#1f241d; border-color:#1f241d; color:#fffaf3; }.creator-section { position:relative; overflow:hidden; }.creator-section::before { content:""; position:absolute; inset:0; opacity:.12; pointer-events:none; background-image:radial-gradient(#6b463b 0.6px, transparent .6px); background-size:7px 7px; }.creator-section > * { position:relative; }.fact-card .eyebrow { margin-bottom:2rem; font-size:.78rem; font-weight:700; letter-spacing:.11em; }.flip-main { padding-top:2.4rem; }.current-intro { margin-bottom:2rem; } @media (max-width:700px) { .about-copy > p { font-size:.98rem; }.credentials-section .credential-block .section-heading > p:last-child { font-size:.9rem; } }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#notes">Know me more</a>
+      </nav>
+      <a id="resume-nav" class="resume-link" href="#" target="_blank" rel="noreferrer">View résumé ↗</a>
+    </header>
+
+    <main id="top">
+      <div class="intro-about">
+      <section class="hero section">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Hi, I’m<br /><span class="name-highlight">Anuska Singh.</span></h1>
+            <div class="hero-bottom">
+              <p id="intro">Urban designer, planner, researcher &amp; architect. I design places and experiences with people at the heart.</p>
+              <a class="round-link" href="#about" aria-label="Read about Anuska">↓</a>
+            </div>
+          </div>
+          <div class="hero-portrait-wrap"><img class="hero-portrait" src="assets/anuska-portrait.png" alt="Anuska Singh" /></div>
+        </div>
+        <div class="marquee" aria-hidden="true"><span>DESIGN · RESEARCH · STORIES · DESIGN · RESEARCH · STORIES · </span></div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-heading"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><p>Still learning.....</p></div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2>Design is how I<br /><em>pay attention.</em></h2>
+            <p id="about-copy">I am interested in the places where people, systems, and culture meet. My practice moves between research, design, and storytelling to make complex things feel more human.</p>
+            <div id="studies" class="study-list" aria-label="Education"></div>
+          </div>
+          <aside class="fact-card">
+            <p class="eyebrow">CURRENTLY</p>
+            <div id="currently" class="current-text">Learning, making, and collecting small observations.</div>
+          </aside>
+        </div>
+      </section>
+      </div>
+
+      <section id="work" class="section work-section">
+        <div class="section-heading"><p class="eyebrow">02 / MY WORKS</p><p>Ideas made tangible.</p></div>
+        <div id="projects" class="project-list"></div>
+      </section>
+
+      <section id="experience" class="section experience-section">
+        <div class="section-heading"><p class="eyebrow">03 / EXPERIENCE</p><p>Planning, design, and research in practice.</p></div>
+        <div id="experience-list" class="experience-list"></div>
+      </section>
+
+      <section class="section credentials-section">
+        <div class="credential-block"><div class="section-heading"><p class="eyebrow">04 / PROUD MOMENTS</p><p>Milestones along the way.</p></div><div id="awards" class="award-list"></div></div>
+        <div class="credential-block"><div class="section-heading"><p class="eyebrow">05 / ON PAPER</p><p>Published thoughts.</p></div><div id="publications" class="publication-list"></div></div>
+      </section>
+
+      <section class="section map-section">
+        <div class="section-heading"><p class="eyebrow">06 / PLACES I’VE BEEN</p><div class="travel-summary"><strong id="country-count-display">01</strong><span>countries<br />travelled</span></div></div>
+        <div id="countries" class="country-cloud" aria-label="Countries Anuska has travelled to"></div>
+      </section>
+
+      <section id="notes" class="section creator-section">
+        <p class="eyebrow">07 / LIFE</p>
+        <div class="creator-content">
+          <div class="creator-left">
+            <h2>Beyond<br /><em>drawings, maps,<br />&amp; plans.</em></h2>
+            <div class="creator-stats" aria-label="Content creation milestones"><div><strong>30.2M+</strong><span>views<br />across platforms</span></div><div><strong>20K+</strong><span>followers<br />across platforms</span></div><div><strong>700K+</strong><span>likes and little<br />moments shared</span></div></div>
+          </div>
+          <div><p id="creator-copy">A running record of experiments, adventures, and the little things worth noticing.</p><div id="creator-links" class="creator-links"></div></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>LET’S BUILD PLACES<br />THAT PEOPLE <em>REMEMBER.</em></p>
+      <a id="email-link" href="mailto:hello@example.com">hello@example.com ↗</a>
+      <p class="footer-small">© <span id="year"></span> ANUSKA · BUILT WITH CURIOSITY &amp; LOTS OF COFFEE</p>
+    </footer>
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -10,7 +10,7 @@ const portfolio = {
   about: "I’ve always been drawn to the small details that shape how people experience a place - the streets they walk, the parks they gather in, & the spaces that quietly become part of everyday life. Design helps me notice those details and imagine how they can be better.",
   currently: {
     intro: "Researching how communities recover after disasters.",
-    topics: ["Disaster recovery", "Walkable neighborhoods", "Community storytelling"],
+    topics: ["Walkable neighborhoods", "Parks & Plazas", "Greenways"],
     location: "Ann Arbor, Michigan",
     reading: "Data Feminism"
   },
@@ -43,7 +43,7 @@ const portfolio = {
     { title: "World Habitat Day 2022: Inclusive Cities for Sustainable Urbanization in Nepal", source: "UN-Habitat Nepal · Dec 2022", summary: "A record of conversations on reducing inequality and building inclusive cities across Nepal.", link: "https://unhabitat.org.np/featured_news_detail/world-habitat-day-2022-inclusive-cities-for-sustainable-urbanization-in-nepal" },
     { title: "Affordable Housing Activation and Inclusive Urban Design in Nepal", source: "SONA International Conference, Madrid · 2022", summary: "A conference contribution exploring affordable housing as a foundation for more inclusive urban design.", link: "CV%20Anuska.pdf#page=3" }
   ],
-  countries: ["Nepal", "United States", "Spain", "Dubai", "Switzerland", "Italy", "France", "Indonesia", "Canada"],
+  countries: ["Nepal", "United States", "Spain", "Dubai", "Switzerland", "Italy", "France", "Indonesia", "Canada", "Malaysia"],
   countryCount: 9,
   creator: "I love sharing little moments of my life. I share recipes I grew up with, traditions, places & everyday moments.",
   creatorLinks: [

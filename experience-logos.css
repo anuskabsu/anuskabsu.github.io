@@ -1,0 +1,40 @@
+.experience-list > article > span {
+  align-self: start;
+  padding: .25rem 0 0;
+  font: 700 .84rem/1 "DM Mono", monospace;
+  letter-spacing: .02em;
+}
+
+.experience-list article {
+  grid-template-columns: 150px minmax(0, 1fr) 60px;
+  align-items: start;
+}
+
+.experience-content { display: block; }
+
+.organization-mark {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  font: 700 .58rem/1 "DM Mono", monospace;
+  letter-spacing: -.08em;
+  text-align: center;
+  color: #28394e;
+  background: transparent;
+}
+
+.organization-mark img { width: 60px; height: 60px; object-fit: contain; }
+.organization-mark.ball-state { border-radius: 0; color: #b51e34; background: transparent; }
+.organization-mark.un-habitat { border-radius: 0; }
+.organization-mark.sona { border-radius: 0; }
+
+@media (max-width: 700px) {
+  .experience-list > article > span { font-size: .76rem; }
+  .experience-list article { grid-template-columns: minmax(0, 1fr) 48px; gap: .75rem; }
+  .experience-list > article > span { grid-column: 1 / -1; }
+  .organization-mark,.organization-mark img { width: 48px; height: 48px; }
+}

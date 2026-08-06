@@ -1,0 +1,145 @@
+.project-pages {
+  display: grid;
+  gap: clamp(8rem, 14vw, 14rem);
+}
+
+.project-page-section {
+  min-width: 0;
+  scroll-margin-top: 5rem;
+}
+
+.project-page-heading {
+  display: grid;
+  grid-template-columns: minmax(190px, .55fr) minmax(0, 1.45fr);
+  gap: clamp(2rem, 7vw, 8rem);
+  align-items: start;
+  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.project-page-heading .eyebrow {
+  padding-top: .65rem;
+}
+
+.project-page-heading h2 {
+  max-width: 760px;
+  font: 600 clamp(3rem, 6.6vw, 7rem)/.94 "Playfair Display", serif;
+  letter-spacing: -.06em;
+}
+
+.project-page-heading h2::first-line {
+  font-style: normal;
+}
+
+.project-page-heading div > p {
+  max-width: 560px;
+  margin: 1.3rem 0 0;
+  font: 1.15rem/1.35 "EB Garamond", Garamond, serif;
+}
+
+.project-page-section .project-description {
+  max-width: 660px;
+}
+
+#urban-design-planning-projects .project-page-heading h2 {
+  max-width: none;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -.045em;
+  text-align: left;
+  justify-self: start;
+  white-space: nowrap;
+}
+
+#urban-design-planning-projects .project-page-heading {
+  grid-template-columns: 1fr;
+  gap: 2.8rem;
+  margin-bottom: 1.25rem;
+}
+
+#urban-design-planning-projects .project-page-heading div > p {
+  font-size: 14px;
+  text-align: left;
+  justify-self: start;
+}
+
+#urban-design-planning-projects .project h3 {
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+#urban-design-planning-projects .project:nth-child(5) h3 {
+  white-space: nowrap;
+}
+
+.gis-method-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 2.5rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.gis-method-strip span {
+  padding: 1.1rem 1.2rem 1.1rem 0;
+  font: .62rem/1.35 "DM Mono", monospace;
+}
+
+.gis-method-strip span + span {
+  padding-left: 1.2rem;
+  border-left: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .project-pages {
+    gap: 7rem;
+  }
+
+  .project-page-heading {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .project-page-heading .eyebrow {
+    padding-top: 0;
+  }
+
+  .project-page-heading h2 {
+    font-size: clamp(2.55rem, 13vw, 4.4rem);
+  }
+
+  #urban-design-planning-projects .project-page-heading h2 {
+    font-size: 30px;
+    line-height: 1.02;
+    letter-spacing: -.055em;
+  }
+
+  #urban-design-planning-projects .project-page-heading {
+    gap: 2.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #urban-design-planning-projects .project-page-heading div > p {
+    font-size: 14px;
+  }
+
+  .project-page-heading div > p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .gis-method-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .gis-method-strip span,
+  .gis-method-strip span + span {
+    padding: .8rem 0;
+    border-left: 0;
+  }
+
+  .gis-method-strip span + span {
+    border-top: 1px solid var(--line);
+  }
+}

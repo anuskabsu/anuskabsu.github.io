@@ -1,0 +1,64 @@
+.section { border-bottom: 0; }
+
+.intro-about {
+  background: linear-gradient(to bottom, #fbf7f0 0%, #f8efe5 30%, #f1ddcd 65%, #e6c8b1 100%);
+}
+
+.work-section {
+  background: linear-gradient(to bottom, #e6c8b1 0%, #f5f0e7 18%, #f5f0e7 80%, #f0eafd 100%);
+}
+
+.experience-section {
+  background: linear-gradient(to bottom, #f0eafd 0%, #f0eafd 82%, #f5f0e7 100%);
+}
+
+.credentials-section {
+  background: linear-gradient(to bottom, #f5f0e7 0%, #f5f0e7 82%, #ead9cf 100%);
+}
+
+.map-section {
+  background: linear-gradient(to bottom, #ead9cf 0%, #e6d6cf 22%, #e6d6cf 76%, #e7ad9c 100%);
+}
+
+.creator-section {
+  background: #e7ad9c;
+}
+
+footer {
+  position: relative;
+  border-top: 0;
+  margin-top: -1px;
+  overflow: hidden;
+  /* Begin with the exact Life-section peach, then ease gradually into
+     charcoal so the full dark tone arrives at the headline. */
+  background: linear-gradient(to bottom,
+    #e7ad9c 0,
+    #e6ac9c .8rem,
+    #e3a99a 1.6rem,
+    #dda498 2.35rem,
+    #d29b91 3.1rem,
+    #c18e85 3.85rem,
+    #a97d75 4.55rem,
+    #896962 5.15rem,
+    #675650 5.7rem,
+    #4a4941 6.15rem,
+    #343a32 6.55rem,
+    #272d26 6.8rem,
+    #1f241d 7rem,
+    #1f241d 100%);
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 7rem;
+  pointer-events: none;
+  opacity: .12;
+  background-image: radial-gradient(#6b463b .6px, transparent .6px);
+  background-size: 7px 7px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+}
+
+footer > * { position: relative; z-index: 1; }

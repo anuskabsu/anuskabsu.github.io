@@ -1,0 +1,252 @@
+:root {
+  --paper: #fbf7f0;
+  --ink: #1f241d;
+  --line: rgba(31, 36, 29, .28);
+  --coral: #f2c4b5;
+  --blue: #d8def5;
+  --yellow: #f4e8aa;
+  --lilac: #dfd2f2;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 82% 9%, rgba(216, 222, 245, .42), transparent 28rem),
+    linear-gradient(180deg, #fbf7f0 0%, #f8efe5 56%, #f1ddcd 100%);
+  font-family: "DM Sans", sans-serif;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: .07;
+  background-image: radial-gradient(#4f392e .55px, transparent .55px);
+  background-size: 7px 7px;
+}
+
+.site-header {
+  height: 78px;
+  padding: 0 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header nav { display: flex; gap: 2rem; }
+
+.site-header a {
+  color: inherit;
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+.site-header .resume-link {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: .7rem 1rem;
+  font-weight: 600;
+}
+
+.project-page {
+  min-height: calc(100vh - 78px);
+  padding: 7rem 9vw 10rem;
+}
+
+.project-page-heading {
+  display: grid;
+  grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr);
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 5.5rem;
+}
+
+.eyebrow,
+.project-page-switcher,
+.project-number,
+.project-type,
+.gis-methods {
+  font-family: "DM Mono", monospace;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: .66rem;
+  letter-spacing: .03em;
+}
+
+.project-page-heading h1 {
+  max-width: 780px;
+  margin: 0;
+  font: 600 clamp(3rem, 6.4vw, 6.6rem)/.92 "Playfair Display", serif;
+  letter-spacing: -.055em;
+}
+
+.project-page-heading h1 em { font-weight: 600; }
+
+.project-page-heading .subtitle {
+  max-width: 640px;
+  margin: 1.4rem 0 0;
+  font: italic clamp(1.2rem, 1.8vw, 1.55rem)/1.28 "EB Garamond", Garamond, serif;
+}
+
+.project-page-switcher {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1.6rem;
+  margin-top: 1.3rem;
+  font-size: .67rem;
+}
+
+.project-page-switcher a {
+  color: inherit;
+  text-underline-offset: .32rem;
+}
+
+.project-page-switcher a[aria-current="page"] { font-weight: 700; }
+
+.project-list { border-top: 1px solid var(--ink); }
+
+.project {
+  --accent: var(--coral);
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 2.75rem 1rem 2.9rem 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: padding .25s ease;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  inset: 100% 0 0;
+  z-index: -1;
+  background: var(--accent);
+  transition: inset .32s cubic-bezier(.2, .7, .2, 1);
+}
+
+.project:hover,
+.project:focus-visible { padding-left: 1rem; }
+
+.project:hover::before,
+.project:focus-visible::before { inset: 0; }
+
+.project:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+.project.coral { --accent: var(--coral); }
+.project.blue { --accent: var(--blue); }
+.project.yellow { --accent: var(--yellow); }
+.project.lilac { --accent: var(--lilac); }
+
+.project-number,
+.project-type {
+  font-size: .67rem;
+  letter-spacing: .01em;
+}
+
+.project-type { margin: 0 0 .55rem; }
+
+.project h2 {
+  margin: 0;
+  font: 600 clamp(2rem, 4vw, 4.1rem)/.98 "Playfair Display", serif;
+  letter-spacing: -.045em;
+}
+
+.project h2 span {
+  display: inline-block;
+  margin-left: .2em;
+  font: 500 .5em "DM Sans", sans-serif;
+  opacity: 0;
+  transform: translate(-.2em, .1em);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.project:hover h2 span,
+.project:focus-visible h2 span {
+  opacity: 1;
+  transform: translate(0, .1em);
+}
+
+.project-description {
+  max-width: 620px;
+  margin: .8rem 0 0;
+  font: 1.15rem/1.32 "EB Garamond", Garamond, serif;
+}
+
+.gis-intro {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: -2rem 0 5rem;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.gis-intro div {
+  min-height: 105px;
+  padding: 1.25rem;
+  background: rgba(251, 247, 240, .72);
+}
+
+.gis-intro b {
+  display: block;
+  margin-bottom: .5rem;
+  font: 600 1.1rem "EB Garamond", Garamond, serif;
+}
+
+.gis-methods {
+  margin: 0;
+  font-size: .62rem;
+  line-height: 1.55;
+}
+
+.project-page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 4.5vw;
+  color: var(--paper);
+  background: var(--ink);
+  font: .66rem "DM Mono", monospace;
+}
+
+.project-page-footer a { color: inherit; text-underline-offset: .3rem; }
+
+@media (max-width: 700px) {
+  .site-header { height: 65px; padding: 0 6vw; }
+  .site-header nav { gap: 1rem; }
+  .site-header nav a:nth-child(2) { display: none; }
+  .site-header .resume-link { padding: .55rem .7rem; font-size: .68rem; }
+  .project-page { min-height: calc(100vh - 65px); padding: 5rem 6vw 7rem; }
+  .project-page-heading { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3.6rem; }
+  .project-page-switcher { grid-column: 1; gap: .75rem 1rem; }
+  .project { grid-template-columns: 35px minmax(0, 1fr); gap: .65rem; padding: 2.2rem .35rem 2.25rem 0; }
+  .project:hover, .project:focus-visible { padding-left: .45rem; }
+  .project-description { font-size: 1.04rem; }
+  .gis-intro { grid-template-columns: 1fr; margin-top: -1rem; }
+  .gis-intro div { min-height: auto; }
+  .project-page-footer { display: block; line-height: 1.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project, .project::before, .project h2 span { transition: none; }
+}

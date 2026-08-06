@@ -1,0 +1,77 @@
+/* Award rows are the only hover trigger. Their text intentionally passes the
+   pointer through to the row, so every part of a row has identical behavior. */
+.award-list article {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color .22s ease;
+}
+
+.award-list article > * {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.award-list article:nth-child(1):hover { background: #f7e4df; }
+.award-list article:nth-child(2):hover { background: #e7f0eb; }
+.award-list article:nth-child(3):hover { background: #eee8f6; }
+.award-list article:nth-child(4):hover { background: #f5eccd; }
+
+footer > p:first-child em { font-size: 36px; }
+
+/* The right-hand panel becomes the corresponding original JPG. */
+.credentials-section { position: relative; }
+.credentials-section .credential-block:last-child {
+  position: relative;
+  overflow: hidden;
+}
+
+.credentials-section .credential-block:last-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  /* Let the panel's own pastel background show around differently sized JPGs. */
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  mix-blend-mode: multiply;
+  clip-path: inset(0 100% 0 0);
+  transform: translateX(-12%);
+  transform-origin: left center;
+  transition: opacity .18s ease, visibility .18s step-end, clip-path .42s ease, transform .42s ease;
+  pointer-events: none;
+}
+
+.credentials-section:has(.award-list article:hover) .credential-block:last-child > * {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.credentials-section:has(.award-list article:hover) .credential-block:last-child::after {
+  opacity: 1;
+  visibility: visible;
+  clip-path: inset(0);
+  transform: translateX(0);
+  transition: opacity .18s ease, visibility 0s, clip-path .42s ease, transform .42s ease;
+}
+
+.credentials-section:has(.award-list article:nth-child(1):hover) .credential-block:last-child::after { background-image: url("assets/Best Portfolio.JPG?v=award-original-v35"); }
+.credentials-section:has(.award-list article:nth-child(2):hover) .credential-block:last-child::after { background-image: url("assets/Photo contest.JPG?v=award-original-v35"); }
+.credentials-section:has(.award-list article:nth-child(3):hover) .credential-block:last-child::after { background-image: url("assets/People Choice.JPG?v=award-original-v35"); }
+.credentials-section:has(.award-list article:nth-child(4):hover) .credential-block:last-child::after { background-image: url("assets/Best Thesis.JPG?v=award-original-v35"); }
+
+/* JavaScript restarts this animation whenever the pointer enters a new award. */
+.credentials-section.award-preview-active .credential-block:last-child::after {
+  animation: award-preview-slide .42s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes award-preview-slide {
+  from { clip-path: inset(0 100% 0 0); transform: translateX(-12%); }
+  to { clip-path: inset(0); transform: translateX(0); }
+}

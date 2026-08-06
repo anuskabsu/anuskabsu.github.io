@@ -1,0 +1,151 @@
+.fact-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2.4rem 2.3rem 2.8rem 3.1rem;
+  border: 1px solid rgba(102, 77, 59, 0.28);
+  background-color: #fffdf8;
+  background-image:
+    linear-gradient(to bottom, transparent 0 30px, #fffdf8 30px 31px, transparent 31px),
+    linear-gradient(to bottom, transparent 0 61px, #fffdf8 61px 62px, transparent 62px),
+    linear-gradient(to right, transparent 0 46px, rgba(180, 68, 68, 0.7) 46px 47px, transparent 47px),
+    linear-gradient(to bottom, transparent 0 46px, rgba(180, 68, 68, 0.7) 46px 47px, transparent 47px),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 30px,
+      rgba(91, 126, 153, 0.24) 30px,
+      rgba(91, 126, 153, 0.24) 31px
+    ),
+    linear-gradient(105deg, #fffefa 0%, #fffdf8 72%, #f8efe5 100%);
+  box-shadow: 10px 12px 0 rgba(120, 82, 57, 0.16), 0 20px 42px rgba(91, 59, 39, 0.14);
+}
+
+.fact-card::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  width: 66px;
+  height: 66px;
+  border: 0;
+  border-radius: 0 0 0 100%;
+  background:
+    linear-gradient(225deg,
+      #fffdf8 0 43%,
+      rgba(117, 82, 61, 0.34) 44% 46%,
+      #eee2d7 47% 66%,
+      transparent 67%);
+  filter: drop-shadow(-4px 5px 3px rgba(107, 70, 59, 0.2));
+  transform-origin: top right;
+  transform: rotate(-1deg);
+}
+
+.fact-card::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 1.1rem;
+  left: 0.72rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  border: 1px solid rgba(94, 70, 54, 0.48);
+  border-radius: 50%;
+  background: #dfc8b2;
+  box-shadow:
+    0 42px 0 #dfc8b2,
+    0 42px 0 1px rgba(94, 70, 54, 0.48),
+    0 84px 0 #dfc8b2,
+    0 84px 0 1px rgba(94, 70, 54, 0.48),
+    0 126px 0 #dfc8b2,
+    0 126px 0 1px rgba(94, 70, 54, 0.48),
+    0 168px 0 #dfc8b2,
+    0 168px 0 1px rgba(94, 70, 54, 0.48),
+    0 210px 0 #dfc8b2,
+    0 210px 0 1px rgba(94, 70, 54, 0.48),
+    0 252px 0 #dfc8b2,
+    0 252px 0 1px rgba(94, 70, 54, 0.48),
+    0 294px 0 #dfc8b2,
+    0 294px 0 1px rgba(94, 70, 54, 0.48),
+    0 336px 0 #dfc8b2,
+    0 336px 0 1px rgba(94, 70, 54, 0.48);
+}
+
+.fact-card .eyebrow,
+.fact-card .current-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Lock every page of the note to the ruled-paper baseline. */
+.fact-card .eyebrow {
+  line-height: 31px;
+  top: 9px;
+}
+
+.fact-card .flip-main,
+.fact-card .flip-reading,
+.fact-card .flip-location,
+.fact-card .flip-coffee {
+  padding-top: 26px;
+}
+
+.fact-card .current-intro,
+.fact-card .current-topics,
+.fact-card .current-reading,
+.fact-card .current-location,
+.fact-card .flip-reading strong,
+.fact-card .flip-location strong {
+  line-height: 31px;
+}
+
+.fact-card .current-intro {
+  margin-bottom: 31px;
+}
+
+.fact-card .current-topics,
+.fact-card .current-reading,
+.fact-card .current-location {
+  margin-top: 0;
+}
+
+.fact-card .flip-reading p,
+.fact-card .flip-location p,
+.fact-card .flip-coffee p {
+  line-height: 31px;
+  margin: 0 0 31px;
+}
+
+.fact-card .reading-book small {
+  white-space: nowrap;
+  font-size: 0.52rem;
+  letter-spacing: -0.025em;
+}
+
+.fact-card .flip-coffee strong {
+  position: relative;
+  top: -5px;
+  line-height: 31px;
+}
+
+.flip-page {
+  transform-origin: right center;
+}
+
+.flipbook[data-page="1"] .flip-main,
+.flipbook[data-page="2"] .flip-main,
+.flipbook[data-page="2"] .flip-reading {
+  transform: rotateY(180deg);
+}
+
+.flip-reading,
+.flip-location {
+  transform: rotateY(-180deg);
+}
+
+.flipbook[data-page="1"] .flip-reading,
+.flipbook[data-page="2"] .flip-location {
+  transform: rotateY(0);
+}

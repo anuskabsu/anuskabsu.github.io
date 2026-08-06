@@ -1,0 +1,172 @@
+.experience-section {
+  background: #f0eafd;
+  font-family: "EB Garamond", Garamond, serif;
+}
+
+.experience-section .eyebrow,
+.experience-section > .section-heading > p:last-child,
+.experience-list > article > span {
+  font-family: "EB Garamond", Garamond, serif;
+}
+
+.experience-list h3,
+.experience-list .experience-organization,
+.experience-list p {
+  font-family: "EB Garamond", Garamond, serif;
+}
+
+.experience-list h3 { font-size: 1.5rem; }
+.experience-list .experience-organization { font-size: 1rem; }
+.experience-list p { font-size: 1.05rem; }
+
+.country-cloud {
+  isolation: isolate;
+  background: radial-gradient(circle at 18% 18%, #fffaf36e 0 2px, transparent 3px) 0 0/28px 28px;
+}
+
+.country-cloud::before,
+.country-cloud::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px dashed #9a655d3d;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.country-cloud.has-flight-route::before,
+.country-cloud.has-flight-route::after { display: none; }
+
+.flight-route-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.country-flight-path {
+  fill: none;
+  stroke: #8f6259;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-dasharray: 1 7;
+  opacity: .54;
+  animation: moving-flight-dashes 45s linear infinite;
+}
+
+.flight-plane {
+  fill: #714c45;
+  font: 20px/1 sans-serif;
+  paint-order: stroke;
+  stroke: #f4dfd4;
+  stroke-width: 2px;
+  filter: drop-shadow(0 1px 3px #75483866);
+}
+
+.country-cloud .country { z-index: 1; }
+@keyframes moving-flight-dashes {
+  to { stroke-dashoffset: -120; }
+}
+
+.country-cloud .country-nepal.plane-arrived {
+  color: #8d4e3d;
+  text-shadow: 0 0 7px #fff4df, 0 0 16px #f4b79b, 0 0 28px #e58d73;
+  transition: color .18s ease, text-shadow .18s ease;
+}
+
+.country-cloud::before { width: 62%; height: 48%; transform: rotate(-12deg); }
+.country-cloud::after { width: 45%; height: 68%; transform: rotate(21deg); }
+.country-cloud::before { animation: flight-path-one 28s linear infinite; }
+.country-cloud::after { animation: flight-path-two 34s linear infinite; }
+
+@keyframes flight-path-one {
+  from { transform: rotate(-12deg) translateX(-1.5%); }
+  50% { transform: rotate(-10deg) translateX(1.5%); }
+  to { transform: rotate(-12deg) translateX(-1.5%); }
+}
+
+@keyframes flight-path-two {
+  from { transform: rotate(21deg) translateY(1.5%); }
+  50% { transform: rotate(19deg) translateY(-1.5%); }
+  to { transform: rotate(21deg) translateY(1.5%); }
+}
+
+.country-cloud:has(.country-nepal:hover)::before,
+.country-cloud:has(.country-nepal:hover)::after {
+  border-color: #f4c7a9;
+  filter: drop-shadow(0 0 5px #f4c7a9) drop-shadow(0 0 10px #f4c7a980);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .country-cloud::before,
+  .country-cloud::after,
+  .country-flight-path,
+  .country-cloud .country-nepal.plane-arrived { text-shadow: none; }
+  .flight-plane { display: none; }
+}
+.country { position: relative; }
+.country:hover { transform: translateY(-.25em) rotate(-3deg) scale(1.06); }
+
+.reading-book {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+}
+
+.flip-main .current-intro,
+.reading-book strong,
+.flip-location strong {
+  font: italic 1.35rem/1.1 "EB Garamond", Garamond, serif;
+  font-weight: 700;
+}
+
+.reading-book img {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 104px;
+  object-fit: cover;
+  transform: rotateY(-12deg) rotateZ(1deg);
+  transform-origin: left center;
+  box-shadow: 5px 6px 0 #6b463b35, 9px 10px 14px #1f241d30;
+}
+
+.reading-book > div {
+  display: flex;
+  flex: 1;
+  min-height: 104px;
+  flex-direction: column;
+}
+
+.reading-book strong { display: block; }
+.reading-book small { display: block; margin-top: .45rem; font: .58rem/1.35 "DM Mono", monospace; }
+.reading-book span { display: block; margin-top: auto; font: .78rem/1.2 "EB Garamond", Garamond, serif; }
+
+.flip-page { overflow: hidden; }
+.flip-coffee {
+  z-index: 0;
+  padding-top: 2.4rem;
+  transform: rotateY(180deg);
+}
+.flip-coffee p { margin: 0 0 1rem; font: .62rem "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+.flip-coffee strong { display: block; font: italic 1.35rem/1.1 "EB Garamond", Garamond, serif; font-weight: 700; }
+.flip-coffee strong { font-size: 1.15rem; letter-spacing: -.02em; white-space: nowrap; }
+.flipbook[data-page="0"] .flip-reading,
+.flipbook[data-page="0"] .flip-location,
+.flipbook[data-page="0"] .flip-coffee,
+.flipbook[data-page="1"] .flip-main,
+.flipbook[data-page="1"] .flip-location,
+.flipbook[data-page="1"] .flip-coffee,
+.flipbook[data-page="2"] .flip-main,
+.flipbook[data-page="2"] .flip-reading,
+.flipbook[data-page="2"] .flip-coffee,
+.flipbook[data-page="3"] .flip-main,
+.flipbook[data-page="3"] .flip-reading,
+.flipbook[data-page="3"] .flip-location { visibility: hidden; }
+
+.flipbook[data-page="3"] .flip-main,
+.flipbook[data-page="3"] .flip-reading,
+.flipbook[data-page="3"] .flip-location { transform: rotateY(-180deg); opacity: 0; }
+.flipbook[data-page="3"] .flip-coffee { transform: rotateY(0); }

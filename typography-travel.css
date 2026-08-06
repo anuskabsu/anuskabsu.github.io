@@ -1,0 +1,15 @@
+.section-heading > p:last-child {
+  font: italic 16px/1.15 "EB Garamond", Garamond, serif;
+}
+
+.credentials-section .credential-block .section-heading > p:last-child,
+.credentials-section .credential-block:first-child .section-heading > p:last-child,
+.credentials-section .credential-block:last-child .section-heading > p:last-child {
+  font: italic 16px/1.15 "EB Garamond", Garamond, serif;
+}
+
+.travel-summary span {
+  padding-bottom: .12rem;
+  font: 10px/1.15 "EB Garamond", Garamond, serif;
+  text-transform: uppercase;
+}

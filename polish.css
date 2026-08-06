@@ -1,0 +1,30 @@
+.publication-list h3 {
+  font: 700 italic 1.2rem/1.08 "EB Garamond", Garamond, serif;
+}
+
+.publication-list a {
+  padding-inline: .5rem;
+  transition: background .2s ease, padding .2s ease;
+}
+
+.publication-list a:nth-child(3n + 1):hover { background: #f7e9df; }
+.publication-list a:nth-child(3n + 2):hover { background: #e8f1ed; }
+.publication-list a:nth-child(3n):hover { background: #eee9f7; }
+
+.country:nth-child(1) { transform: translate(-2.2rem, -.7rem) rotate(-2deg); }
+.country:nth-child(2) { transform: translate(1.7rem, .8rem) rotate(2deg); }
+.country:nth-child(3) { transform: translate(-.7rem, 1.5rem) rotate(-3deg); }
+.country:nth-child(4) { transform: translate(2.5rem, -.5rem) rotate(3deg); }
+.country:nth-child(5) { transform: translate(-2.8rem, .4rem) rotate(-1deg); }
+.country:nth-child(6) { transform: translate(1.1rem, -1.2rem) rotate(2deg); }
+.country:nth-child(7) { transform: translate(-1.8rem, 1.1rem) rotate(-2deg); }
+.country:nth-child(8) { transform: translate(2.6rem, .6rem) rotate(1deg); }
+.country:nth-child(9) { transform: translate(-.9rem, -1.4rem) rotate(-3deg); }
+.country:nth-child(10) { transform: translate(1.8rem, 1.3rem) rotate(2deg); }
+
+footer > p:first-child { font-size: 32px; }
+
+@media (max-width: 700px) {
+  .country:nth-child(n) { transform: none; }
+  footer > p:first-child { font-size: 32px; }
+}

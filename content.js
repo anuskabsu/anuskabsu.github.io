@@ -10,7 +10,6 @@ const portfolio = {
   about: "I’ve always been drawn to the small details that shape how people experience a place - the streets they walk, the parks they gather in & the spaces that quietly become part of everyday life. Design helps me notice those details and imagine how they can be better.",
   currently: {
     intro: "Researching how communities recover after disasters.",
-<<<<<<< HEAD
     topics: ["Greenways", "Parks & plazas", "Walkable neighborhoods"],
     location: "Ann Arbor, Michigan",
     reading: "Data Feminism"

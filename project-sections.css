@@ -113,6 +113,11 @@
     font-size: 30px;
     line-height: 1.02;
     letter-spacing: -.055em;
+    white-space: normal;
+  }
+
+  #urban-design-planning-projects .project:nth-child(5) h3 {
+    white-space: normal;
   }
 
   #urban-design-planning-projects .project-page-heading {

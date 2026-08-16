@@ -1,23 +1,167 @@
 .experience-section {
-  background: #f0eafd;
+  background: #f5f3fd;
   font-family: "EB Garamond", Garamond, serif;
 }
 
 .experience-section .eyebrow,
-.experience-section > .section-heading > p:last-child,
-.experience-list > article > span {
+.experience-section .experience-heading-right p {
   font-family: "EB Garamond", Garamond, serif;
 }
 
-.experience-list h3,
-.experience-list .experience-organization,
-.experience-list p {
-  font-family: "EB Garamond", Garamond, serif;
+.experience-heading { align-items: flex-start; }
+
+.experience-heading-right {
+  margin-left: auto;
+  text-align: right;
 }
 
-.experience-list h3 { font-size: 1.5rem; }
-.experience-list .experience-organization { font-size: 1rem; }
-.experience-list p { font-size: 1.05rem; }
+.experience-heading-right p {
+  margin: 0;
+  font: italic 16px/1.15 "EB Garamond", Garamond, serif;
+}
+
+.experience-resume-link {
+  display: inline-block;
+  margin-top: .7rem;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: .7rem 1rem;
+  font: 600 .8rem/1 "DM Sans", sans-serif;
+  letter-spacing: .02em;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.experience-resume-link:hover {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+/* Quiet editorial timeline: YEAR | INFO | empty space */
+.experience-list article {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 720px) 1fr;
+  column-gap: 2.5rem;
+  align-items: start;
+  padding: 2.1rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: border-color .25s ease;
+}
+
+.experience-list .experience-year {
+  padding-top: .38rem;
+  font: .72rem/1.5 "DM Mono", monospace;
+  letter-spacing: .02em;
+  color: #9a938b;
+  white-space: nowrap;
+}
+
+.experience-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.experience-content { display: block; }
+
+/* Subtle colored logo markers beneath the year */
+.organization-mark,
+.organization-mark.ball-state,
+.organization-mark.un-habitat,
+.organization-mark.sona {
+  width: 40px;
+  height: 40px;
+  opacity: .6;
+}
+
+.organization-mark.iudp,
+.organization-mark.urban-park {
+  width: 40px;
+  height: 28px;
+}
+
+.organization-mark.iudp img,
+.organization-mark.urban-park img {
+  width: 40px;
+  height: 28px;
+}
+
+.organization-mark.un-habitat img,
+.organization-mark.sona img {
+  width: 40px;
+  height: 40px;
+}
+
+.organization-mark.ball-state { font-size: .6rem; }
+
+.experience-list h3 {
+  margin: 0;
+  font: 600 1.5rem/1.05 "Playfair Display", serif;
+  letter-spacing: -.03em;
+  transition: color .25s ease;
+}
+
+.experience-list .experience-organization {
+  margin: .2rem 0 0;
+  font: 700 1rem/1.4 "EB Garamond", Garamond, serif;
+  color: #5c4033;
+}
+
+.experience-list .experience-location {
+  font-weight: 400;
+  color: #6f675f;
+}
+
+.experience-list .experience-summary {
+  margin: .6rem 0 0;
+  max-width: 560px;
+  font: italic .98rem/1.45 "EB Garamond", Garamond, serif;
+  color: #707070;
+}
+
+.experience-list .experience-keywords {
+  margin-top: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  font: .66rem/1.4 "DM Mono", monospace;
+  letter-spacing: .04em;
+  color: #8a837b;
+  transition: max-height .3s ease, opacity .3s ease, transform .3s ease, margin-top .3s ease;
+}
+
+.experience-list article:hover .experience-keywords,
+.experience-list article:focus-within .experience-keywords {
+  margin-top: .5rem;
+  max-height: 1.6rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-list article:hover h3 { color: #5c4033; }
+.experience-list article:hover { border-bottom-color: rgba(31, 36, 29, .55); }
+
+@media (max-width: 700px) {
+  .experience-list article {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: .6rem;
+    padding: 1.75rem 0;
+  }
+  .experience-list .experience-year {
+    padding-top: 0;
+    font-size: .66rem;
+  }
+  .experience-heading-right {
+    margin-left: 0;
+    margin-top: .7rem;
+    text-align: left;
+  }
+}
 
 .country-cloud {
   isolation: isolate;

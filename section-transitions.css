@@ -5,11 +5,11 @@
 }
 
 .work-section {
-  background: linear-gradient(to bottom, #e6c8b1 0%, #f5f0e7 18%, #f5f0e7 80%, #f0eafd 100%);
+  background: linear-gradient(to bottom, #e6c8b1 0%, #f5f0e7 18%, #f5f0e7 80%, #f5f3fd 100%);
 }
 
 .experience-section {
-  background: linear-gradient(to bottom, #f0eafd 0%, #f0eafd 82%, #f5f0e7 100%);
+  background: linear-gradient(to bottom, #f5f3fd 0%, #f5f3fd 82%, #f5f0e7 100%);
 }
 
 .credentials-section {

@@ -314,7 +314,19 @@ if (collageQuery === 'urban-design') openUdCollage();
 if (collageQuery === 'urban-planning') openMurpCollage();
 el('experience-list').innerHTML = portfolio.experience.map(e => {
   const logo = e.logoSrc ? `<img src="${safe(e.logoSrc)}" alt="" />` : `<span>${safe(e.logo)}</span>`;
-  return `<article><span>${safe(e.period)}</span><div class="experience-content"><h3>${safe(e.title)}</h3><p class="experience-organization">${safe(e.organization)}</p><p>${safe(e.summary)}</p></div><div class="organization-mark ${safe(e.logoClass)}" role="img" aria-label="${safe(e.organization)} logo">${logo}</div></article>`;
+  return `
+  <article>
+    <div class="experience-left">
+      <span class="experience-year">${safe(e.period)}</span>
+      <div class="organization-mark ${safe(e.logoClass)}" role="img" aria-label="${safe(e.organization)} logo">${logo}</div>
+    </div>
+    <div class="experience-content">
+      <h3>${safe(e.title)}</h3>
+      <p class="experience-organization">${safe(e.organization)}<span class="experience-location"> · ${safe(e.location)}</span></p>
+      <p class="experience-summary">${safe(e.summary)}</p>
+      <p class="experience-keywords" aria-hidden="true">${safe(e.keywords)}</p>
+    </div>
+  </article>`;
 }).join('');
 el('awards').innerHTML = portfolio.awards.map(a => `<article tabindex="0"><span>${safe(a.year)}</span><div><h3>${safe(a.title)}</h3><p>${safe(a.organization)}</p></div></article>`).join('');
 const credentialsSection = document.querySelector('.credentials-section');
@@ -344,7 +356,10 @@ awardsList.addEventListener('focusin', event => {
   const award = event.target.closest('article');
   if (award && awardsList.contains(award)) showAwardPreview(award);
 });
-el('publications').innerHTML = portfolio.publications.map(p => `<a href="${safe(p.link)}" target="_blank" rel="noreferrer"><div><h3>${safe(p.title)}</h3><p>${safe(p.source)}</p><p class="publication-summary">${safe(p.summary)}</p></div><span>↗</span></a>`).join('');
+el('publications').innerHTML = portfolio.publications.map(p => p.link
+  ? `<a href="${safe(p.link)}" target="_blank" rel="noreferrer"><div><h3>${safe(p.title)}</h3><p>${safe(p.source)}</p><p class="publication-summary">${safe(p.summary)}</p></div><span>↗</span></a>`
+  : `<div class="publication-no-link"><div><h3>${safe(p.title)}</h3><p>${safe(p.source)}</p><p class="publication-summary">${safe(p.summary)}</p></div></div>`
+).join('');
 el('countries').innerHTML = portfolio.countries.map((country, index) => {
   return `<span class="country country-${index % 5}${country === 'Nepal' ? ' country-nepal' : ''}">${safe(country)}</span>`;
 }).join('');

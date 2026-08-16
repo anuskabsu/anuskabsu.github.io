@@ -27,32 +27,34 @@ const portfolio = {
       title: "Urban Design & Planning Projects",
       subtitle: "Major projects shaped through research, planning, landscape, and urban design.",
       projects: [
-        { title: "The Connected Path", type: "Urban Design Thesis", year: "2025", description: "A citywide greenway framework reconnecting Indianapolis neighborhoods through parks, active mobility, ecological restoration, and healthier public spaces.", link: "Projects%20Folder/Capstone%20Project.pdf", color: "coral" },
-        { title: "Green Connections", type: "Landscape Architecture", year: "2024", description: "Transforming underused spaces into connected parks, riverfront landscapes, and vibrant neighborhood destinations.", link: "Projects%20Folder/Green%20Connections.pdf", color: "blue" },
-        { title: "Canalscape", type: "Urban Design Studio", year: "2024", description: "A mixed-use waterfront neighborhood that strengthens pedestrian movement, public life, and ecological connections along the Indianapolis Canal.", link: "Projects%20Folder/Canalscape.pdf", color: "yellow" },
-        { title: "The Mosaic", type: "ULI Hines Student Competition", year: "2024", description: "A mixed-use cultural district connecting housing, transit, business, and nature through attainable urban living.", link: "Projects%20Folder/The%20Mosaic.pdf", color: "lilac" },
-        { title: "Muncie Downtown Revitalization", type: "Urban Design + Development", year: "2023", description: "Transforming underused downtown parking lots into a connected neighborhood with housing, retail, parks, and public spaces.", link: "Projects%20Folder/Muncie%20Downtown%20Revitalization.pdf", color: "coral" },
-        { title: "Recessed Highway", type: "Urban Design Studio", year: "2024", description: "Reimagining highway infrastructure as a walkable mixed-use district with transit, housing, parks, and vibrant public spaces.", link: "Projects%20Folder/Recessed%20Highway.pdf", color: "blue" }
+        { title: "The Connected Path", type: "Urban Design Thesis", year: "2025", description: "A citywide greenway framework connecting Indianapolis neighborhoods through parks, active mobility, ecological restoration, and public spaces.", link: "Projects%20Folder/Capstone%20Project.pdf", color: "coral" },
+        { title: "Grid to Green", type: "Landscape Architecture", year: "2024", description: "A landscape-focused project linking underused spaces, parks, and riverfront areas to support nature, recreation, and community life.", link: "Projects%20Folder/Green%20Connections.pdf", color: "green" },
+        { title: "Canalscape", type: "Urban Design Studio", year: "2024", description: "A mixed-use waterfront neighborhood along the Indianapolis Canal focused on walkability, public life, and connections to the water.", link: "Projects%20Folder/Canalscape.pdf", color: "yellow" },
+        { title: "The Mosaic", type: "ULI Hines Student Competition", year: "2024", description: "A mixed-use district combining housing, transit, businesses, public spaces, and nature within a connected neighborhood.", link: "Projects%20Folder/The%20Mosaic.pdf", color: "lilac" },
+        { title: "Muncie Downtown Revitalization", type: "Urban Design + Development", year: "2023", description: "A downtown redevelopment project turning underused parking lots into a connected neighborhood with housing, retail, parks, and public spaces.", link: "Projects%20Folder/Muncie%20Downtown%20Revitalization.pdf", color: "coral" },
+        { title: "Recessed Highway", type: "Urban Design Studio", year: "2024", description: "A walkable mixed-use district built around redesigned highway infrastructure, with housing, transit, parks, and active public spaces.", link: "Projects%20Folder/Recessed%20Highway.pdf", color: "blue" }
       ]
     },
     {
       id: "gis-spatial-analysis",
       number: "02",
       label: "GIS & SPATIAL ANALYSIS",
-      title: "Cities read through data.",
+      title: "GIS & Spatial Analysis",
       subtitle: "Exploring cities through maps, data, and spatial analysis.",
-      methods: ["ACCESS + EQUITY", "GEOCODING + NETWORK ANALYSIS", "CENSUS + COMMUNITY DATA"],
       projects: [
-        { title: "GIS & Spatial Analysis", type: "Research + Mapping", year: "2024", description: "A collection of spatial analysis, cartography, geocoding, and network-modeling work addressing access, public safety, and food deserts.", link: "Anuska%20Singh_Portfolio.pdf#page=14", color: "blue" }
+        { title: "Gun Violence & Neighborhood Demographics", type: "Spatial Analysis", year: "2024", description: "Fatal shooting patterns reveal distinct hotspots across U.S. cities. Neighborhood demographics provide added context to these spatial differences.", link: "GIS%20Files/Gun%20Violence%20in%20USA.pdf", color: "coral" },
+        { title: "Food Access & Urban Disparities", type: "Spatial Analysis", year: "2024", description: "Limited grocery access and income disparities shape food accessibility across Indianapolis. Their overlap highlights neighborhoods facing greater barriers to healthy food.", link: "GIS%20Files/Food%20deserts.pdf", color: "yellow" },
+        { title: "Network-Based Accessibility", type: "Network Analysis", year: "2024", description: "Travel distance and travel time reveal different patterns of access across Delaware County. Road connectivity helps explain how easily facilities can be reached.", link: "GIS%20Files/Driving%20Distnace.pdf", color: "blue" },
+        { title: "Park Site Suitability", type: "Access Analysis", year: "2024", description: "Environmental conditions and road accessibility shape opportunities for future parks. Spatial analysis highlights locations with strong potential for park development.", link: "GIS%20Files/Parks.pdf", color: "green" }
       ]
     }
   ],
   experience: [
-    { period: "2025 — PRESENT", title: "Research Assistant", organization: "Institute of Urban Development and Policy Research", logoSrc: "assets/iudp-mark.png", logoClass: "iudp", summary: "Prepare datasets in R and produce demographic, policy, and post-disaster recovery analysis, visualizations, and documentation." },
-    { period: "2023 — 2025", title: "Graduate & Research Assistant", organization: "Ball State University", logo: "BSU", logoClass: "ball-state", summary: "Supported planning instruction and faculty research through Census, ACS, BLS, GIS, mapping, graphics, reports, and presentations." },
-    { period: "2022 — 2023", title: "Volunteer", organization: "UN-Habitat Nepal", logoSrc: "assets/un-habitat-mark.png", logoClass: "un-habitat", summary: "Synthesized workshop discussions and stakeholder feedback into reports and briefing documents for inclusive development and policy conversations." },
-    { period: "2020 — 2023", title: "Urban Designer / Architect", organization: "Urban Park Pvt. Ltd.", logoSrc: "assets/urban-park-mark.png", logoClass: "urban-park", summary: "Developed master plans, urban design proposals, architectural projects, feasibility studies, construction documents, and visualizations." },
-    { period: "2020 — 2022", title: "Technical Volunteer", organization: "Society of Nepalese Architects", logoSrc: "assets/sona-mark.png", logoClass: "sona", summary: "Contributed to conference communication, visual identity, and affordable-housing research, including the Affordable Housing Activation program in Madrid." }
+    { period: "2025 — PRESENT", title: "Research Assistant", organization: "Institute of Urban Development and Policy Research", location: "Ann Arbor, Michigan", keywords: "R · GIS · Demographics · Policy", summary: "Researching communities, recovery, and the stories behind the data.", logoSrc: "assets/iudp-mark.png", logoClass: "iudp" },
+    { period: "2023 — 2025", title: "Graduate & Research Assistant", organization: "Ball State University", location: "Muncie, Indiana", keywords: "Census · GIS · Research · Graphics", summary: "Turning planning research into maps, graphics, and visual stories.", logo: "BSU", logoClass: "ball-state" },
+    { period: "2022 — 2023", title: "Volunteer", organization: "UN-Habitat Nepal", location: "Kathmandu, Nepal", keywords: "Community · Research · Documentation", summary: "Listening, documenting, and bringing community conversations together.", logoSrc: "assets/un-habitat-mark.png", logoClass: "un-habitat" },
+    { period: "2020 — 2023", title: "Urban Designer / Architect", organization: "Urban Park Pvt. Ltd.", location: "Kathmandu, Nepal", keywords: "Architecture · Urban Design · Visualization", summary: "Designing places at the intersection of architecture and everyday life.", logoSrc: "assets/urban-park-mark.png", logoClass: "urban-park" },
+    { period: "2020 — 2022", title: "Technical Volunteer", organization: "Society of Nepalese Architects", location: "Kathmandu, Nepal", keywords: "Communication · Visual Identity · Research", summary: "Shaping conference conversations, visual identity, and research on affordable housing.", logoSrc: "assets/sona-mark.png", logoClass: "sona" }
   ],
   awards: [
     { year: "2024", title: "Best Portfolio Award", organization: "Ball State University" },
@@ -64,7 +66,7 @@ const portfolio = {
     { title: "Building a Vision for the Future", source: "The News-Gazette · Feb 2024", summary: "A newspaper feature on Ball State urban planning students’ work for the Union City Comprehensive Plan.", link: "https://www.winchesternewsgazette.com/news/building-a-vision-for-the-future/article_946935b8-d4e0-11ee-ae8a-8b1ebb1d9f40.html" },
     { title: "Rehabilitating Squatter Settlements: Begin with Affordable Housing Solutions", source: "The Himalayan Times · Jan 2023", summary: "An argument for equitable, affordable housing and secure tenure in Kathmandu’s informal settlements.", link: "https://thehimalayantimes.com/opinion/rehabilitating-squatter-settlements-begin-with-affordable-housing-solutions" },
     { title: "World Habitat Day 2022: Inclusive Cities for Sustainable Urbanization in Nepal", source: "UN-Habitat Nepal · Dec 2022", summary: "A record of conversations on reducing inequality and building inclusive cities across Nepal.", link: "https://unhabitat.org.np/featured_news_detail/world-habitat-day-2022-inclusive-cities-for-sustainable-urbanization-in-nepal" },
-    { title: "Affordable Housing Activation and Inclusive Urban Design in Nepal", source: "SONA International Conference, Madrid · 2022", summary: "A conference contribution exploring affordable housing as a foundation for more inclusive urban design.", link: "CV%20Anuska.pdf#page=3" }
+    { title: "Affordable Housing Activation and Inclusive Urban Design in Nepal", source: "SONA International Conference, Madrid · 2022", summary: "A conference contribution exploring affordable housing as a foundation for more inclusive urban design." }
   ],
   countries: ["Nepal", "United States", "Spain", "Dubai", "Switzerland", "Italy", "France", "Indonesia", "Canada", "Malaysia"],
   countryCount: 10,

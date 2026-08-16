@@ -40,32 +40,51 @@
   max-width: 660px;
 }
 
-#urban-design-planning-projects .project-page-heading h2 {
+.project-page-section .project-page-heading h2 {
   max-width: none;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: -.045em;
+  color: #5c4033;
   text-align: left;
   justify-self: start;
   white-space: nowrap;
 }
 
-#urban-design-planning-projects .project-page-heading {
+.project-page-section .project-page-heading {
   grid-template-columns: 1fr;
   gap: 2.8rem;
   margin-bottom: 1.25rem;
 }
 
-#urban-design-planning-projects .project-page-heading div > p {
-  font-size: 14px;
-  text-align: left;
-  justify-self: start;
+.project-page-section .project-page-heading div > p {
+  display: none;
 }
 
-#urban-design-planning-projects .project h3 {
+.project-page-section .project h3 {
   font-size: 24px;
   line-height: 1.08;
   letter-spacing: -.035em;
+}
+
+.project-page-section .project-type {
+  color: #5c4033;
+}
+
+.project-page-section .project-description {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #707070;
+}
+
+.project-page-section .project-description::after {
+  content: " View Project \2192";
+  color: #5c4033;
+  font-family: "EB Garamond", Garamond, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 #urban-design-planning-projects .project:nth-child(5) h3 {
@@ -109,8 +128,8 @@
     font-size: clamp(2.55rem, 13vw, 4.4rem);
   }
 
-  #urban-design-planning-projects .project-page-heading h2 {
-    font-size: 30px;
+  .project-page-section .project-page-heading h2 {
+    font-size: 40px;
     line-height: 1.02;
     letter-spacing: -.055em;
     white-space: normal;
@@ -120,13 +139,9 @@
     white-space: normal;
   }
 
-  #urban-design-planning-projects .project-page-heading {
+  .project-page-section .project-page-heading {
     gap: 2.8rem;
     margin-bottom: 1.25rem;
-  }
-
-  #urban-design-planning-projects .project-page-heading div > p {
-    font-size: 14px;
   }
 
   .project-page-heading div > p {

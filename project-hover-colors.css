@@ -6,5 +6,6 @@
 .project:before { z-index: -1; }
 .project.coral { --accent: #f1c7bf; }
 .project.blue { --accent: #c9dced; }
+.project.green { --accent: #dcedc8; }
 .project.yellow { --accent: #f5e4ba; }
 .project.lilac { --accent: #e7dcf4; }

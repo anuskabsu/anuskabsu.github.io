@@ -7,6 +7,16 @@
   transition: background .2s ease, padding .2s ease;
 }
 
+.publication-list .publication-no-link {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem .5rem;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+}
+
 .publication-list a:nth-child(3n + 1):hover { background: #f7e9df; }
 .publication-list a:nth-child(3n + 2):hover { background: #e8f1ed; }
 .publication-list a:nth-child(3n):hover { background: #eee9f7; }

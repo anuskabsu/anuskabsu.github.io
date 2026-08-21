@@ -60,7 +60,7 @@ body {
 
 .project-page {
   min-height: calc(100vh - 78px);
-  padding: 7rem 9vw 10rem;
+  padding: 5rem 9vw 7rem;
 }
 
 .project-page-heading {
@@ -68,7 +68,7 @@ body {
   grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr);
   gap: 3rem;
   align-items: start;
-  margin-bottom: 5.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .eyebrow,
@@ -235,8 +235,8 @@ body {
   .site-header nav { gap: 1rem; }
   .site-header nav a:nth-child(2) { display: none; }
   .site-header .resume-link { padding: .55rem .7rem; font-size: .68rem; }
-  .project-page { min-height: calc(100vh - 65px); padding: 5rem 6vw 7rem; }
-  .project-page-heading { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3.6rem; }
+  .project-page { min-height: calc(100vh - 65px); padding: 3.5rem 6vw 5rem; }
+  .project-page-heading { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2.5rem; }
   .project-page-switcher { grid-column: 1; gap: .75rem 1rem; }
   .project { grid-template-columns: 35px minmax(0, 1fr); gap: .65rem; padding: 2.2rem .35rem 2.25rem 0; }
   .project:hover, .project:focus-visible { padding-left: .45rem; }

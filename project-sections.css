@@ -1,6 +1,6 @@
 .project-pages {
   display: grid;
-  gap: clamp(8rem, 14vw, 14rem);
+  gap: clamp(4rem, 7vw, 7rem);
 }
 
 .project-page-section {
@@ -13,7 +13,7 @@
   grid-template-columns: minmax(190px, .55fr) minmax(0, 1.45fr);
   gap: clamp(2rem, 7vw, 8rem);
   align-items: start;
-  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
 .project-page-heading .eyebrow {
@@ -111,13 +111,13 @@
 
 @media (max-width: 700px) {
   .project-pages {
-    gap: 7rem;
+    gap: clamp(4rem, 7vw, 7rem);
   }
 
   .project-page-heading {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2rem;
   }
 
   .project-page-heading .eyebrow {

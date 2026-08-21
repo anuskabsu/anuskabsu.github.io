@@ -5,7 +5,7 @@
 const portfolio = {
   name: "Anuska Singh",
   email: "anuskabsu@gmail.com",
-  resume: "CV%20Anuska.pdf?v=2026-08-02",
+  resume: "Resume/Cirriculum%20Vitae%20_%20Anuska.pdf",
   intro: "Urban designer, planner, researcher & architect.\nI design for people.",
   about: "I’ve always been drawn to the small details that shape how people experience a place - the streets they walk, the parks they gather in & the spaces that quietly become part of everyday life. Design helps me notice those details and imagine how they can be better.",
   currently: {
@@ -28,7 +28,7 @@ const portfolio = {
       subtitle: "Major projects shaped through research, planning, landscape, and urban design.",
       projects: [
         { title: "The Connected Path", type: "Urban Design Thesis", year: "2025", description: "A citywide greenway framework connecting Indianapolis neighborhoods through parks, active mobility, ecological restoration, and public spaces.", link: "Projects%20Folder/Capstone%20Project.pdf", color: "coral" },
-        { title: "Grid to Green", type: "Landscape Architecture", year: "2024", description: "A landscape-focused project linking underused spaces, parks, and riverfront areas to support nature, recreation, and community life.", link: "Projects%20Folder/Green%20Connections.pdf", color: "green" },
+        { title: "Grid to Green", type: "Landscape Architecture", year: "2024", description: "A landscape-focused project linking underused spaces, parks, and riverfront areas to support nature, recreation, and community life.", link: "Projects%20Folder/Grid%20to%20Green.pdf", color: "green" },
         { title: "Canalscape", type: "Urban Design Studio", year: "2024", description: "A mixed-use waterfront neighborhood along the Indianapolis Canal focused on walkability, public life, and connections to the water.", link: "Projects%20Folder/Canalscape.pdf", color: "yellow" },
         { title: "The Mosaic", type: "ULI Hines Student Competition", year: "2024", description: "A mixed-use district combining housing, transit, businesses, public spaces, and nature within a connected neighborhood.", link: "Projects%20Folder/The%20Mosaic.pdf", color: "lilac" },
         { title: "Muncie Downtown Revitalization", type: "Urban Design + Development", year: "2023", description: "A downtown redevelopment project turning underused parking lots into a connected neighborhood with housing, retail, parks, and public spaces.", link: "Projects%20Folder/Muncie%20Downtown%20Revitalization.pdf", color: "coral" },
@@ -44,7 +44,7 @@ const portfolio = {
       projects: [
         { title: "Gun Violence & Neighborhood Demographics", type: "Spatial Analysis", year: "2024", description: "Fatal shooting patterns reveal distinct hotspots across U.S. cities. Neighborhood demographics provide added context to these spatial differences.", link: "GIS%20Files/Gun%20Violence%20in%20USA.pdf", color: "coral" },
         { title: "Food Access & Urban Disparities", type: "Spatial Analysis", year: "2024", description: "Limited grocery access and income disparities shape food accessibility across Indianapolis. Their overlap highlights neighborhoods facing greater barriers to healthy food.", link: "GIS%20Files/Food%20deserts.pdf", color: "yellow" },
-        { title: "Network-Based Accessibility", type: "Network Analysis", year: "2024", description: "Travel distance and travel time reveal different patterns of access across Delaware County. Road connectivity helps explain how easily facilities can be reached.", link: "GIS%20Files/Driving%20Distnace.pdf", color: "blue" },
+        { title: "Network-Based Accessibility", type: "Network Analysis", year: "2024", description: "Travel distance and travel time reveal different patterns of access across Delaware County. Road connectivity helps explain how easily facilities can be reached.", link: "GIS%20Files/Driving%20Distance.pdf", color: "blue" },
         { title: "Park Site Suitability", type: "Access Analysis", year: "2024", description: "Environmental conditions and road accessibility shape opportunities for future parks. Spatial analysis highlights locations with strong potential for park development.", link: "GIS%20Files/Parks.pdf", color: "green" }
       ]
     }
